@@ -21,8 +21,9 @@ def generate(median=90, err=10, outlier_err=30, size=1000, outlier_size=10):
 if __name__ == '__main__':
     # TODO: retrieve the environment variable values for the mqtt broker and the desired rate for the publisher
     broker = os.environ.get('BROKER')
-    rate = int(os.environ.get('RATE'))
+    rate = os.environ.get('RATE')
     topic = os.environ.get('TOPIC')
+    rate = int(rate)
     
     
     # TODO: use the generate function to create a pool of values for the publisher
